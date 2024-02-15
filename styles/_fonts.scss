@@ -1,0 +1,59 @@
+@use "sass:map";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$font-family: "Poppins", sans-serif;
+
+$body: (
+	"large": (
+		"prefix": "l",
+		"size": 22px,
+		"line-height": 144%,
+	),
+	"medium": (
+		"prefix": "m",
+		"size": 18px,
+		"line-height": 132%,
+	),
+	"small": (
+		"prefix": "s",
+		"size": 16px,
+		"line-height": 148%,
+	),
+	"extra-small": (
+		"prefix": "xs",
+		"size": 14px,
+		"line-height": 140%,
+	),
+);
+
+h1 {
+	font-size: 44px;
+	font-weight: 500;
+	line-height: 128%;
+}
+
+h2 {
+	font-size: 30px;
+	font-weight: 500;
+	line-height: 120%;
+}
+
+h3 {
+	font-size: 22px;
+	font-weight: 600;
+	line-height: 124%;
+}
+
+h4 {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 132%;
+}
+
+@each $size, $properties in $body {
+	.body-#{map.get($properties, "prefix")} {
+		font-size: map-get($properties, "size");
+		line-height: map-get($properties, "line-height");
+	}
+}

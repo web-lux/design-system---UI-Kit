@@ -1,0 +1,41 @@
+@use "./colors" as *;
+
+ol,
+ul {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	row-gap: 8px;
+
+	li {
+		list-style: none;
+		display: flex;
+		align-items: baseline;
+		column-gap: 12px;
+	}
+}
+
+ul li::before {
+	$size: 8px;
+	content: "";
+	display: block;
+	width: $size;
+	height: $size;
+	background-color: $primary;
+	border-radius: 2px;
+}
+
+ol {
+	counter-reset: counter;
+
+	li {
+		counter-increment: counter;
+
+		&::before {
+			content: counter(counter) ". ";
+			color: $primary;
+			font-weight: 700;
+		}
+	}
+}

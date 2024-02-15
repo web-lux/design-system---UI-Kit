@@ -1,6 +1,7 @@
 @use "./styles/normalize.css";
 @use "./styles/fonts" as *;
 @use "./styles/lists";
+@use "./styles/quotation";
 
 body {
 	font-family: $font-family;

@@ -1,0 +1,10 @@
+@use "./colors" as *;
+
+blockquote {
+	border-left: solid 4px $primary;
+	padding-left: 12px;
+
+	footer {
+		color: $hint-text;
+	}
+}

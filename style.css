@@ -394,6 +394,14 @@ ol li::before {
   font-weight: 700;
 }
 
+blockquote {
+  border-left: solid 4px #9d3fe7;
+  padding-left: 12px;
+}
+blockquote footer {
+  color: #4b3a5a;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }

@@ -1,0 +1,26 @@
+@use "sass:map";
+
+$corner-radius: (
+	"small": (
+		"prefix": "s",
+		"value": 4px,
+	),
+	"medium": (
+		"prefix": "m",
+		"value": 8px,
+	),
+	"large": (
+		"prefix": "l",
+		"value": 12px,
+	),
+	"extra large": (
+		"prefix": "xl",
+		"value": 24px,
+	),
+);
+
+@each $size, $properties in $corner-radius {
+	.border-radius-#{map.get($properties, "prefix")} {
+		border-radius: map-get($properties, "value");
+	}
+}

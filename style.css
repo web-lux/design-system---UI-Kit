@@ -410,6 +410,22 @@ blockquote footer {
   color: #4b3a5a;
 }
 
+.border-radius-s {
+  border-radius: 4px;
+}
+
+.border-radius-m {
+  border-radius: 8px;
+}
+
+.border-radius-l {
+  border-radius: 12px;
+}
+
+.border-radius-xl {
+  border-radius: 24px;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }

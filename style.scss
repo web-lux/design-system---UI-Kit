@@ -3,6 +3,7 @@
 @use "./styles/fonts" as *;
 @use "./styles/lists";
 @use "./styles/quotation";
+@use "./styles/utils";
 
 body {
 	font-family: $font-family;

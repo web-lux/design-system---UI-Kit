@@ -426,6 +426,22 @@ blockquote footer {
   border-radius: 24px;
 }
 
+.shadow-xs {
+  box-shadow: 0px 15px 10px 0px rgba(211, 192, 214, 0.07);
+}
+
+.shadow-s {
+  box-shadow: 0px 8px 16px 0px rgba(62, 19, 77, 0.07);
+}
+
+.shadow-m {
+  box-shadow: 0px 15px 30px 0px rgba(62, 19, 77, 0.09);
+}
+
+.shadow-l {
+  box-shadow: 0px 10px 30px 0px rgba(62, 19, 77, 0.47);
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }

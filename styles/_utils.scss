@@ -24,3 +24,28 @@ $corner-radius: (
 		border-radius: map-get($properties, "value");
 	}
 }
+
+$shadow: (
+	"extra-small": (
+		"prefix": "xs",
+		"value": 0px 15px 10px 0px rgba(211, 192, 214, 0.07),
+	),
+	"small": (
+		"prefix": "s",
+		"value": 0px 8px 16px 0px rgba(62, 19, 77, 0.07),
+	),
+	"medium": (
+		"prefix": "m",
+		"value": 0px 15px 30px 0px rgba(62, 19, 77, 0.09),
+	),
+	"large": (
+		"prefix": "l",
+		"value": 0px 10px 30px 0px rgba(62, 19, 77, 0.47),
+	),
+);
+
+@each $size, $properties in $shadow {
+	.shadow-#{map.get($properties, "prefix")} {
+		box-shadow: map-get($properties, "value");
+	}
+}

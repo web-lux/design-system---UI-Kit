@@ -463,6 +463,20 @@ blockquote footer {
 .btn-l:disabled {
   --color: #d4d2d5;
 }
+.btn-l.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-l.btn-icon::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  mask: url(/public/save.svg) no-repeat 50% 50%;
+  mask-size: cover;
+  background-color: #fff;
+}
 
 .btn-m {
   --color: #9d3fe7;
@@ -480,6 +494,20 @@ blockquote footer {
 }
 .btn-m:disabled {
   --color: #d4d2d5;
+}
+.btn-m.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-m.btn-icon::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  mask: url(/public/save.svg) no-repeat 50% 50%;
+  mask-size: cover;
+  background-color: #fff;
 }
 
 .btn-s {
@@ -499,22 +527,19 @@ blockquote footer {
 .btn-s:disabled {
   --color: #d4d2d5;
 }
-
-.btn-secondary {
-  --color: #9d3fe7;
-  border-radius: 4px;
-  background-color: transparent;
-  color: var(--color);
-  border: solid 1px var(--color);
+.btn-s.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
-.btn-secondary:hover {
-  --color: #ae60eb;
-}
-.btn-secondary:active {
-  --color: #6a17ab;
-}
-.btn-secondary:disabled {
-  --color: #d4d2d5;
+.btn-s.btn-icon::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  mask: url(/public/save.svg) no-repeat 50% 50%;
+  mask-size: cover;
+  background-color: #fff;
 }
 
 .link {

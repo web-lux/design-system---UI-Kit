@@ -25,7 +25,7 @@ $buttons: (
 	),
 );
 
-@mixin button($type, $icon: null) {
+@mixin button($type) {
 	--color: #{$default};
 	border-radius: 4px;
 
@@ -53,16 +53,48 @@ $buttons: (
 	}
 }
 
+@mixin icon($type) {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+
+	&::before {
+		$size: 18px;
+		content: "";
+		width: $size;
+		height: $size;
+		display: inline-block;
+		mask: url(/public/save.svg) no-repeat 50% 50%;
+		mask-size: cover;
+
+		@if $type == "primary" {
+			background-color: c.$white;
+		} @else if $type == "secondary" {
+			background-color: var(--color);
+		}
+	}
+}
+
 @each $size, $properties in $buttons {
 	.btn-#{map.get($properties, "prefix")} {
-		@include button("primary");
+		$type: "primary";
+		@include button($type);
 		padding: map-get($properties, "padding");
 		font-size: map-get($properties, "font-size");
+
+		&.btn-icon {
+			@include icon($type);
+		}
 	}
 }
 
 .btn-secondary {
-	@include button("secondary");
+	$type: "secondary";
+	@include button($type);
+
+	&.btn-icon {
+		@include icon($type);
+	}
 }
 
 .link {

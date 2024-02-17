@@ -316,6 +316,10 @@ template {
   box-sizing: border-box;
 }
 
+button {
+  border: none;
+}
+
 h1 {
   font-size: 44px;
   font-weight: 500;
@@ -440,6 +444,77 @@ blockquote footer {
 
 .shadow-l {
   box-shadow: 0px 10px 30px 0px rgba(62, 19, 77, 0.47);
+}
+
+.btn-l {
+  --color: #9d3fe7;
+  border-radius: 4px;
+  background-color: var(--color);
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 18px;
+}
+.btn-l:hover {
+  --color: #ae60eb;
+}
+.btn-l:active {
+  --color: #6a17ab;
+}
+.btn-l:disabled {
+  --color: #d4d2d5;
+}
+
+.btn-m {
+  --color: #9d3fe7;
+  border-radius: 4px;
+  background-color: var(--color);
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+}
+.btn-m:hover {
+  --color: #ae60eb;
+}
+.btn-m:active {
+  --color: #6a17ab;
+}
+.btn-m:disabled {
+  --color: #d4d2d5;
+}
+
+.btn-s {
+  --color: #9d3fe7;
+  border-radius: 4px;
+  background-color: var(--color);
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 14px;
+}
+.btn-s:hover {
+  --color: #ae60eb;
+}
+.btn-s:active {
+  --color: #6a17ab;
+}
+.btn-s:disabled {
+  --color: #d4d2d5;
+}
+
+.btn-secondary {
+  --color: #9d3fe7;
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--color);
+  border: solid 1px var(--color);
+}
+.btn-secondary:hover {
+  --color: #ae60eb;
+}
+.btn-secondary:active {
+  --color: #6a17ab;
+}
+.btn-secondary:disabled {
+  --color: #d4d2d5;
 }
 
 .link {

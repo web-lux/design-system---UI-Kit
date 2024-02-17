@@ -1,9 +1,69 @@
+@use "sass:map";
 @use "./colors" as c;
+@use "./utils" as utils;
 
 $default: c.$primary;
 $hovered: #ae60eb;
 $pressed: #6a17ab;
 $disabled: c.$disabled;
+
+$buttons: (
+	"large": (
+		"prefix": "l",
+		"padding": 12px 24px,
+		"font-size": 18px,
+	),
+	"medium": (
+		"prefix": "m",
+		"padding": 8px 16px,
+		"font-size": 16px,
+	),
+	"small": (
+		"prefix": "s",
+		"padding": 4px 8px,
+		"font-size": 14px,
+	),
+);
+
+@mixin button($type, $icon: null) {
+	--color: #{$default};
+	border-radius: 4px;
+
+	&:hover {
+		--color: #{$hovered};
+	}
+
+	&:active {
+		--color: #{$pressed};
+	}
+
+	&:disabled {
+		--color: #{$disabled};
+	}
+
+	@if $type == "primary" {
+		background-color: var(--color);
+		color: c.$white;
+	}
+
+	@if $type == "secondary" {
+		background-color: transparent;
+		color: var(--color);
+		border: solid 1px var(--color);
+	}
+}
+
+@each $size, $properties in $buttons {
+	.btn-#{map.get($properties, "prefix")} {
+		@include button("primary");
+		padding: map-get($properties, "padding");
+		font-size: map-get($properties, "font-size");
+	}
+}
+
+.btn-secondary {
+	@include button("secondary");
+}
 
 .link {
 	$default: c.$link;

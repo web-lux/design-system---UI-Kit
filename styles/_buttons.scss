@@ -1,0 +1,21 @@
+@use "./colors" as c;
+
+$default: c.$primary;
+$hovered: #ae60eb;
+$pressed: #6a17ab;
+$disabled: c.$disabled;
+
+.link {
+	$default: c.$link;
+	$hovered: #1a15d3;
+	$pressed: #0f0c9e;
+	color: $default;
+
+	&:hover {
+		color: $hovered;
+	}
+
+	&:active {
+		color: $pressed;
+	}
+}

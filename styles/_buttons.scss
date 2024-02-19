@@ -25,9 +25,8 @@ $buttons: (
 	),
 );
 
-@mixin button($type) {
+@mixin color-state() {
 	--color: #{$default};
-	border-radius: 4px;
 
 	&:hover {
 		--color: #{$hovered};
@@ -40,6 +39,11 @@ $buttons: (
 	&:disabled {
 		--color: #{$disabled};
 	}
+}
+
+@mixin button($type) {
+	@include color-state();
+	border-radius: 4px;
 
 	@if $type == "primary" {
 		background-color: var(--color);
@@ -95,6 +99,13 @@ $buttons: (
 	&.btn-icon {
 		@include icon($type);
 	}
+}
+
+.btn-text {
+	@include color-state();
+	@include icon("secondary");
+	cursor: pointer;
+	color: var(--color);
 }
 
 .link {

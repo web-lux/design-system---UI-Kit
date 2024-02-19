@@ -573,6 +573,33 @@ blockquote footer {
   background-color: var(--color);
 }
 
+.btn-text {
+  --color: #9d3fe7;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: var(--color);
+}
+.btn-text:hover {
+  --color: #ae60eb;
+}
+.btn-text:active {
+  --color: #6a17ab;
+}
+.btn-text:disabled {
+  --color: #d4d2d5;
+}
+.btn-text::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  mask: url(/public/save.svg) no-repeat 50% 50%;
+  mask-size: cover;
+  background-color: var(--color);
+}
+
 .link {
   color: #0f0bab;
 }
